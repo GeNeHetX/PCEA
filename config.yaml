@@ -1,0 +1,30 @@
+# This is the configuration file for the pipeline
+
+lame: 546778-20  # Name of the sample
+path_to_data: data_external/new_lames  # Path to the data directory excluding the sample name
+
+# Parameters for normalization
+normalization_method: rms  # Method for normalization (rms: Root Mean Square)
+
+# Base line reduction
+base_line_method: locmin  # Method for base line reduction (locmin: local minima)
+
+# Parameters for calibration
+calibration_method: locmax  # Method for calibration (locmax: local maxima)
+calibration_tolerance: 0.1  # Tolerance for the calibration
+units: mz  # Units for the tolerance
+
+# Parameters for spectrum peak picking
+peak_pick_method: cwt  # Method for peak picking (cwt: continuous wavelet transform)
+signal_to_noise: 3  # Signal to noise ratio
+
+# Parameters for peak alignment 
+peak_pick_tolerance: 0.25  # Tolerance for the alignment
+plot_selected_peaks: True  # Whether to plot the detected peaks or not
+
+# Parameters for peak filtering
+filtered_frequency: 0.1  # Frequency for the filter
+
+# Parameters for pixels geojson
+plot_pixels_and_contour : True  # Whether to plot the pixels and the contour
+plot_compression: 1000  # Compression factor for the plot
